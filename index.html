@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusPad</title>
+
+    <link rel="stylesheet" href="stylesheet.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>FocusPad</h1>
+        <button id="dark-mode-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000" class="bi bi-moon"
+                viewBox="0 0 16 16">
+                <path
+                    d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286" />
+            </svg>
+        </button>
+    </header>
+
+    <div class="pomodoro-timer">
+        <h2>Pomodoro Timer</h2>
+        <div id="timer-display">25:00</div>
+        <div class="timer-btns">
+            <button id="pause-btn">Pause</button>
+            <button id="start-btn">Start</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+    </div>
+
+    <section id="task-section" class="card">
+        <h2>Task List</h2>
+
+        <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Enter your task..." />
+            <button id="addTaskBtn">Add</button>
+        </div>
+
+        <ul id="task-list"></ul>
+    </section>
+
+    <section id="daily-stats">
+        <h2>Daily Stats</h2>
+        <p>Focus Sessions: <span id="session-count">0</span></p>
+        <p>Total Focus Time: <span id="focus-time">0</span> minutes</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

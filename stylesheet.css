@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .2s;
+}
+
+:root {
+    --vietnam-font: "Be Vietnam Pro", sans-serif;
+    --bg-color: #ffffff;
+    --text-color: #222222;
+    --card-bg: #f2f2f2;
+    --btn-bg: #e0e0e0;
+    --btn-text: #222222;
+    --hover-btn: #c2c2c2;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --card-bg: #1e1e1e;
+    --btn-bg: #333333;
+    --btn-text: #f0f0f0;
+    --hover-btn: #646464;
+}
+
+::placeholder {
+    color: var(--text-color);
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+header {
+    padding: 40px 20px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header h1 {
+    font-size: 23px;
+    font-family: var(--vietnam-font);
+}
+
+header button {
+    padding: 2px;
+    display: flex;
+    background: transparent;
+    border: none;
+}
+
+header button svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* Pomodoro timer */
+.pomodoro-timer {
+    /* margin: 100px 0; */
+    padding: 100px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-family: var(--vietnam-font);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.pomodoro-timer h2 {
+    padding: 0 0 20px 0;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+#timer-display {
+    font-size: 60px;
+}
+
+.pomodoro-timer .timer-btns {
+    display: flex;
+    gap: 12px;
+}
+
+.pomodoro-timer .timer-btns button {
+    padding: 8px 12px;
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--btn-bg);
+    color: var(--text-color);
+}
+
+.pomodoro-timer .timer-btns button:hover {
+    background-color: var(--hover-btn);
+}
+
+
+/* Task List */
+#task-section {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--text-color);
+}
+
+#task-section h2 {
+    padding: 20px 0;
+    font-family: var(--vietnam-font);
+    font-size: 25px;
+}
+
+.task-input input {
+    margin: 0 0 20px 0;
+    padding: 12px;
+    border: none;
+    border-radius: 9px;
+    font-family: var(--vietnam-font);
+    background-color: var(--btn-bg);
+    color: var(--text-color);
+    font-size: 15px;
+}
+
+.task-input button {
+    width: 70px;
+    padding: 12px 0;
+    font-size: 12px;
+    border: none;
+    border-radius: 9px;
+    font-size: 13px;
+    font-family: var(--vietnam-font);
+    font-weight: bold;
+    background-color: var(--btn-bg);
+    color: var(--text-color);
+}
+
+.task-input button:hover {
+    background-color: var(--hover-btn);
+}
+
+#task-section #task-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#task-section #task-list li {
+    width: 380px;
+    padding: 20px;
+    background-color: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+#task-section #task-list li span {
+    padding: 0 10px;
+    font-family: var(--vietnam-font);
+    font-size: 17px;
+}
+
+#task-section #task-list li button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    color: var(--text-color);
+}
+
+
+/* Daily stats */
+#daily-stats {
+    margin: 100px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#daily-stats h2 {
+    padding: 0 0 12px 0;
+    font-family: var(--vietnam-font);
+    color: var(--text-color);
+}
+
+#daily-stats p {
+    font-family: var(--vietnam-font);
+    color: var(--text-color)
+}
+
+@media (max-width: 430px) {
+    #task-section #task-list li {
+        width: 90%;
+    }
+}
