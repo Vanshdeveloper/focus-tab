@@ -30,7 +30,7 @@ toggleBtn.addEventListener('click', () => {
 
 // Pomodoro Timer
 let timer;
-let timeLeft = 0.1 * 60;
+let timeLeft = 25 * 60;
 let isRunning = false;
 
 let timerDisplay = document.getElementById('timer-display');
@@ -72,7 +72,7 @@ pauseBtn.addEventListener('click', () => {
 resetBtn.addEventListener('click', () => {
     clearInterval(timer);
     isRunning = false;
-    timeLeft = 0.1 * 60;
+    timeLeft = 25 * 60;
     updateDisplay();
 })
 
